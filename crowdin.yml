@@ -4,3 +4,8 @@ files:
     "languages_mapping":
       "locale_with_underscore":
         "zh-CN": "zh_cn"
+  - source: /src/source/CreateExtraGauges.json
+    translation: /src/output/assets/extra_gauges/%locale_with_underscore%.json
+    "languages_mapping":
+      "locale_with_underscore":
+        "zh-CN": "zh_cn"

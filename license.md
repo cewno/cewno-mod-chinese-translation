@@ -1,0 +1,1 @@
+# This translation project follows the license of each original file.

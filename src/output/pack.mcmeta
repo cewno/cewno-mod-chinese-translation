@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "cewno 的模组中文翻译项目",
+    "description": "cewno 的模组中文翻译",
     "min_format": 1,
     "max_format": 100,
     "supported_formats": [1,100]

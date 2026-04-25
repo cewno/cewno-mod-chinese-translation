@@ -1,0 +1,68 @@
+name: release
+on:
+  workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ env.version }}
+    steps:
+      - name: Get short SHA
+        run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV
+
+      - name: set env1
+        run: echo "version=$(date +'%Y%m%d')_$SHORT_SHA" >> $GITHUB_ENV
+
+      - name: Checkout sources
+        uses: actions/checkout@v6
+
+      - name: copy licenses
+        run: cp -r licenses src
+
+      - name: pack
+        env:
+          VERSION: ${{ env.version }}
+        run: cd src/output;zip -r build_$VERSION.zip *
+
+      - name: ls
+        run: ls src
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          path: "src/output/build_${{ env.version }}.zip"
+          archive: false
+
+
+  publish:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v8
+        with:
+          name: "build_${{ needs.build.outputs.version }}.zip"
+          path: ./
+          skip-decompress: true
+
+      - name: Create and upload GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ needs.build.outputs.version }}
+          name: "Release ${{ needs.build.outputs.version }}"
+          draft: false
+          prerelease: false
+          files: "build_${{ needs.build.outputs.version }}.zip"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: publish modrinth
+        uses: cloudnode-pro/modrinth-publish@v2
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project: ${{ vars.MODRINTH_PROJECT }}
+          version: ${{ needs.build.outputs.version }}
+          loaders: minecraft
+          game-versions: 1.21.1
+          files: "build_${{ needs.build.outputs.version }}.zip"

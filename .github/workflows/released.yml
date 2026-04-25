@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: copy licenses
-        run: cp -r licenses src
+        run: cp -r licenses src/output
 
       - name: pack
         env:

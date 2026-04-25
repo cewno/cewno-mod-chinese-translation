@@ -1,0 +1,6 @@
+files:
+  - source: /src/source/create_train_parts.json
+    translation: /src/output/assets/create_train_parts/%locale_with_underscore%.json
+    "languages_mapping":
+      "locale_with_underscore":
+        "zh-CN": "zh_cn"

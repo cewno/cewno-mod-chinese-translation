@@ -24,9 +24,6 @@ jobs:
           VERSION: ${{ env.version }}
         run: cd src/output;zip -r build_$VERSION.zip *
 
-      - name: ls
-        run: ls src
-
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
         with:

@@ -4,17 +4,22 @@ on:
   workflow_dispatch:
     inputs:
       uploadTranslations:
-        description: "Set to true to upload (changed) translations to Crowdin"
+        description: "上传翻译文件"
         type: boolean
         required: true
         default: false
       download_translations:
-        description: "Set to true to download latest translations to i10n branch "
+        description: "下载翻译文件到仓库"
         type: boolean
         required: true
         default: true
       create_pull_request:
-        description: "Set to true to create a pull request to synchronize the language files to main"
+        description: "自动创建推送翻译到主分支的 PR"
+        type: boolean
+        required: true
+        default: true
+      upload_sources:
+        description: "上传原语言文件"
         type: boolean
         required: true
         default: true
@@ -26,13 +31,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: set env1
+        run: echo "date=$(date +'%Y%m%d')" >> $GITHUB_ENV
+
       - name: Crowdin action
         uses: crowdin/github-action@v2
         with:
-          upload_sources: true
+          upload_sources: ${{ github.event.inputs.upload_sources }}
           download_translations: ${{ github.event.inputs.download_translations }}
           upload_translations: ${{ github.event.inputs.uploadTranslations }}
           create_pull_request: ${{ github.event.inputs.create_pull_request }}
+          pull_request_title: 更新翻译文件 ${{ env.date }} [GitHub Action]
+          commit_message: 更新翻译文件 ${{ env.date }} [GitHub Action]
         env:
           GITHUB_TOKEN: ${{ github.token }}
           CROWDIN_PROJECT_ID: ${{ vars.CROWDIN_PROJECT_ID }}

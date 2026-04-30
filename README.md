@@ -12,6 +12,10 @@ Please refer to [this link](license.md) for the license of the used language fil
 [[Modrinth]](https://modrinth.com/mod/create-train-parts)
 [[GitHub]](https://github.com/TiesToetToet/Create-Train-Parts/)
 
+Sable
+[[Modrinth]](https://modrinth.com/mod/sable)
+[[GitHub]](https://github.com/ryanhcode/sable)
+
 ## 进行中的模组
 
 机械动力：更多仪表（Create Extra Gauges）

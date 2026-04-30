@@ -11,3 +11,9 @@ Modrinth: [here](https://modrinth.com/mod/create-train-parts)
 license: [here](/licenses/CreateExtraGauges)  
 GitHub: [here](https://github.com/LIUKRAST/CreateExtraGauges)  
 Modrinth: [here](https://modrinth.com/mod/extra-gauges)
+
+## Sable
+
+license: [here](/licenses/sable.md)  
+GitHub: [here](https://github.com/ryanhcode/sable)  
+Modrinth: [here](https://modrinth.com/mod/sable)

@@ -2,7 +2,7 @@ name: Auto upload with crowdin
 on:
   push:
     paths:
-      - src/source
+      - src/source/*
 jobs:
   sync:
     runs-on: ubuntu-latest

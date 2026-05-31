@@ -1,19 +1,1 @@
 # 该翻译项目遵循原始文件的许可证 This translation project follows the license of each original file.
-
-## Create Train Parts
-
-license: [here](/licenses/Create-Train-Parts)  
-GitHub: [here](https://github.com/TiesToetToet/Create-Train-Parts/)  
-Modrinth: [here](https://modrinth.com/mod/create-train-parts)
-
-## Create Extra Gauges
-
-license: [here](/licenses/CreateExtraGauges)  
-GitHub: [here](https://github.com/LIUKRAST/CreateExtraGauges)  
-Modrinth: [here](https://modrinth.com/mod/extra-gauges)
-
-## Sable
-
-license: [here](/licenses/sable.md)  
-GitHub: [here](https://github.com/ryanhcode/sable)  
-Modrinth: [here](https://modrinth.com/mod/sable)

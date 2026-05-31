@@ -8,17 +8,3 @@ Please refer to [this link](license.md) for the license of the used language fil
 本人水平有限，欢迎指正，也可以到[Crowdin](https://crowdin.com/project/cewno-mod-chinese-translation)一起翻译
 
 ## 已翻译完成的模组
-机械动力：列车部件（Create Train Parts）
-[[Modrinth]](https://modrinth.com/mod/create-train-parts)
-[[GitHub]](https://github.com/TiesToetToet/Create-Train-Parts/)
-
-Sable
-[[Modrinth]](https://modrinth.com/mod/sable)
-[[GitHub]](https://github.com/ryanhcode/sable)
-
-## 进行中的模组
-
-机械动力：更多仪表（Create Extra Gauges）
-[[Modrinth]](https://modrinth.com/mod/extra-gauges)
-[[GitHub]](https://github.com/LIUKRAST/CreateExtraGauges)
-

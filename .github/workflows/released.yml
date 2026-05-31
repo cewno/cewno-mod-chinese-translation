@@ -39,7 +39,7 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v8
         with:
-          name: "build_${{ needs.build.outputs.version }}.zip"
+          name: "cewno-mod-chinese-translation_${{ needs.build.outputs.version }}.zip"
           path: ./
           skip-decompress: true
 
@@ -50,7 +50,7 @@ jobs:
           name: "Release ${{ needs.build.outputs.version }}"
           draft: false
           prerelease: false
-          files: "build_${{ needs.build.outputs.version }}.zip"
+          files: "cewno-mod-chinese-translation_${{ needs.build.outputs.version }}.zip"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -62,4 +62,4 @@ jobs:
           version: ${{ needs.build.outputs.version }}
           loaders: minecraft
           game-versions: 1.21.1
-          files: "build_${{ needs.build.outputs.version }}.zip"
+          files: "cewno-mod-chinese-translation_${{ needs.build.outputs.version }}.zip"

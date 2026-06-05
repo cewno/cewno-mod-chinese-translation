@@ -47,7 +47,7 @@ jobs:
 
       - name: rename
         env:
-          VERSION: ${{ env.version }}
+          VERSION: ${{ needs.build.outputs.version }}
         run: mv build_$VERSION.zip cewno-mod-chinese-translation_$VERSION.zip
 
       - name: Create and upload GitHub Release

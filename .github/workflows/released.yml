@@ -48,7 +48,7 @@ jobs:
       - name: rename
         env:
           VERSION: ${{ env.version }}
-        run: mv "build_$VERSION.zip" "cewno-mod-chinese-translation_$VERSION.zip"
+        run: mv build_$VERSION.zip cewno-mod-chinese-translation_$VERSION.zip
 
       - name: Create and upload GitHub Release
         uses: softprops/action-gh-release@v3

@@ -28,7 +28,6 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           path: "src/output/build_${{ env.version }}.zip"
-          archive: false
 
 
   publish:
@@ -39,9 +38,13 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v8
         with:
-          name: "cewno-mod-chinese-translation_${{ needs.build.outputs.version }}.zip"
+          name: "build_${{ env.version }}.zip"
           path: ./
-          skip-decompress: true
+
+      - name: rename
+        env:
+          VERSION: ${{ env.version }}
+        run: mv "build_$VERSION.zip" "cewno-mod-chinese-translation_$VERSION.zip"
 
       - name: Create and upload GitHub Release
         uses: softprops/action-gh-release@v3

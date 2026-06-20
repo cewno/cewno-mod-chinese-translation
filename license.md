@@ -3,5 +3,8 @@
 ## Create-Electro-Energetics  
 
 license: [here](/licenses/electroenergetics)  
-GitHub: [here](https://github.com/george8188625/Create-Electro-Energetics)  
+[GitHub](https://github.com/george8188625/Create-Electro-Energetics)  
+[Modrinth](https://modrinth.com/mod/create-electro-energetics)  
+[CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-electro-energetics)
+
 

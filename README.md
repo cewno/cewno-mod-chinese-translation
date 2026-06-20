@@ -7,10 +7,6 @@ Please refer to [this link](license.md) for the license of the used language fil
 
 本人水平有限，欢迎指正，也可以到[Crowdin](https://crowdin.com/project/cewno-mod-chinese-translation)一起翻译
 
-## 正在翻译的的模组
-Create Simurail  
-[GitHub](https://github.com/Crystaelix/Create-Simurail)
-
 ## 已翻译完成的模组
 机械动力：电力学  
 [GitHub](https://github.com/george8188625/Create-Electro-Energetics)  

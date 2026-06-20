@@ -7,4 +7,8 @@ license: [here](/licenses/electroenergetics)
 [Modrinth](https://modrinth.com/mod/create-electro-energetics)  
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-electro-energetics)
 
+## Create Simurail
+
+license: [here](/licenses/simurail)  
+[GitHub](https://github.com/Crystaelix/Create-Simurail)  
 

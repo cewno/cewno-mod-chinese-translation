@@ -50,6 +50,7 @@
   "block.electroenergetics.double_connector": "双重接线端子",
   "block.electroenergetics.double_switch": "双闸刀开关",
   "block.electroenergetics.duplex_wire_termination": "双绞线接头",
+  "block.electroenergetics.electric_fan": "电风扇",
   "block.electroenergetics.electric_pump": "电动泵",
   "block.electroenergetics.electric_shock_sign": "触电警示牌",
   "block.electroenergetics.electrical_panel": "电气面板",
